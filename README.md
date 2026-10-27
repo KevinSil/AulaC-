@@ -38,4 +38,4 @@ Projeto em desenvolvimento, com possibilidade de adicionar novas funcionalidades
 
 ## 👨‍💻 Autor
 
-Desenvolvido como projeto de programação em C#.
+Kevin Andrade Silva.
