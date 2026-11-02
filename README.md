@@ -1,41 +1,45 @@
-# 🏠 Sistema de Venda e Aluguer de Imóveis
+# CyberGuard
 
-## 📌 Sobre o Projeto
+Base ASP.NET Core MVC para centralizar informação de cibersegurança organizacional. A Fase 1 estabelece a análise do sistema, o modelo de domínio, o schema SQLite e a estrutura do projeto. Não inclui módulos CRUD funcionais, autenticação, dashboards ou monitorização em tempo real.
 
-Este projeto consiste no desenvolvimento de uma aplicação em **C#** destinada à gestão de imóveis para venda e aluguer. O programa permite organizar e consultar informações sobre diferentes propriedades, facilitando a gestão dos imóveis disponíveis no mercado imobiliário.
+## Tecnologias
 
-O objetivo é criar uma solução simples e eficiente que permita gerir imóveis, consultar as suas características e acompanhar o seu estado de disponibilidade.
+- .NET 10 e ASP.NET Core MVC
+- Entity Framework Core 10
+- SQLite
 
-## ⚙️ Funcionalidades
+## Estrutura
 
-- 🏡 **Gestão de imóveis:** registar e consultar informações sobre casas e apartamentos.
-- 💰 **Venda de imóveis:** disponibilizar propriedades para venda e consultar os respetivos preços.
-- 🔑 **Aluguer de imóveis:** gerir propriedades disponíveis para arrendamento e os valores das rendas.
-- 🔎 **Pesquisa de imóveis:** procurar propriedades de acordo com as suas características.
-- 📋 **Consulta de informações:** visualizar dados como localização, preço e tipo de imóvel.
-- 🛠️ **Gestão de disponibilidade:** identificar os imóveis disponíveis para venda ou aluguer.
+A aplicação está na pasta `CyberGuard/`.
 
-## 💻 Tecnologias Utilizadas
+- `Models/`: oito entidades de domínio e respetivas enumerações
+- `Data/`: contexto EF Core e configuração do schema
+- `Migrations/`: versões do schema SQLite
+- `Services/`: estrutura inicial de validação de regras de negócio
+- `ViewModels/`: classe base para modelos de vista
+- `Documentation/`: requisitos, diagrama ER, modelo relacional, dicionário de dados e regras de negócio
 
-- **Linguagem de programação:** C#
-- **Plataforma:** .NET
-- **Ambiente de desenvolvimento:** Visual Studio
+## Modelo de dados
 
-## 🚀 Objetivos do Projeto
+A base SQLite contém `Empresas`, `Equipamentos`, `Tecnicos`, `Incidentes`, `Vulnerabilidades`, `Intervencoes`, `RelatoriosSeguranca` e `RegistosAtividade`.
 
-Este projeto tem como principais objetivos aplicar os conhecimentos de programação em C#, desenvolver competências na criação de aplicações e implementar funcionalidades relacionadas com a gestão de imóveis.
+A connection string está em `CyberGuard/appsettings.json`. Por omissão, a base de dados é `CyberGuard/cyberguard.db`.
 
-## ▶️ Como Executar
+## Executar
 
-1. Clonar ou descarregar este repositório.
-2. Abrir a solução do projeto no Visual Studio.
-3. Confirmar que o .NET necessário está instalado.
-4. Compilar e executar a aplicação.
+A partir da raiz do repositório:
 
-## 📌 Estado do Projeto
+```powershell
+cd CyberGuard
+dotnet restore
+dotnet tool restore
+dotnet ef database update
+dotnet run
+```
 
-Projeto em desenvolvimento, com possibilidade de adicionar novas funcionalidades e melhorias no futuro.
+O manifesto da ferramenta EF Core está em `CyberGuard/dotnet-tools.json`.
 
-## 👨‍💻 Autor
-Kevin Andrade Silva.
+## Documentação
+
+Consultar `CyberGuard/Documentation/` para os requisitos do sistema, o diagrama entidade-relação, o schema relacional, o dicionário de dados e as regras de negócio.
 

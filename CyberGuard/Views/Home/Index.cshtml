@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Visao geral";
+}
+
+<div class="workspace-shell" id="overview">
+    <aside class="sidebar" aria-label="Navegacao principal">
+        <a class="brand" asp-controller="Home" asp-action="Index" aria-label="CyberGuard, inicio">
+            <span class="brand-mark" aria-hidden="true">C</span>
+            <span class="brand-copy">
+                <strong>CyberGuard</strong>
+                <small>SECURITY PLATFORM</small>
+            </span>
+        </a>
+
+        <div class="sidebar-caption">PLATAFORMA</div>
+        <nav class="side-navigation">
+            <a class="side-link is-active" href="#overview" aria-current="page">
+                <span class="side-link-index">01</span>
+                Visao geral
+            </a>
+            <a class="side-link" href="#foundation">
+                <span class="side-link-index">02</span>
+                Fundacao do sistema
+            </a>
+        </nav>
+
+        <div class="sidebar-foot">
+            <span class="connection-indicator" aria-hidden="true"></span>
+            <span><strong>SQLite</strong><small>Schema aplicado</small></span>
+        </div>
+    </aside>
+
+    <main class="main-panel">
+        <header class="topbar">
+            <span>AMBIENTE DE DESENVOLVIMENTO</span>
+            <span class="phase-label"><span></span> FASE 01</span>
+        </header>
+
+        <section class="page-intro">
+            <div class="eyebrow"><span class="eyebrow-line"></span> CYBERGUARD / CENTRO DE SEGURANCA</div>
+            <h1>Visao geral</h1>
+            <p>A base da plataforma esta pronta. O modelo de dominio e o schema SQLite estao definidos para suportar as proximas fases.</p>
+        </section>
+
+        <section class="foundation-strip" aria-label="Estado da fundacao">
+            <div class="foundation-stat">
+                <span class="stat-label">PERSISTENCIA</span>
+                <strong>SQLite</strong>
+                <span class="stat-note"><span class="tiny-check">&#10003;</span> Schema aplicado</span>
+            </div>
+            <div class="foundation-stat">
+                <span class="stat-label">ACESSO A DADOS</span>
+                <strong>EF Core <span class="stat-version">10</span></strong>
+                <span class="stat-note"><span class="tiny-check">&#10003;</span> Contexto configurado</span>
+            </div>
+            <div class="foundation-stat">
+                <span class="stat-label">MODELO DE DOMINIO</span>
+                <strong>08 <span class="stat-unit">entidades</span></strong>
+                <span class="stat-note">Relacoes definidas</span>
+            </div>
+            <div class="foundation-stat">
+                <span class="stat-label">SCHEMA</span>
+                <strong>02 <span class="stat-unit">migracoes</span></strong>
+                <span class="stat-note">Sem alteracoes pendentes</span>
+            </div>
+        </section>
+
+        <section class="content-grid" id="foundation">
+            <div class="domain-section">
+                <div class="section-heading">
+                    <div>
+                        <div class="section-kicker">ESTRUTURA DE DADOS</div>
+                        <h2>Modelo de dominio</h2>
+                    </div>
+                    <span class="entity-count">08 ENTIDADES</span>
+                </div>
+
+                <div class="entity-list">
+                    <div class="entity-row"><span class="entity-number">01</span><strong>Empresas</strong><span class="entity-description">Organizacoes acompanhadas</span><span class="entity-type">ORGANIZACAO</span></div>
+                    <div class="entity-row"><span class="entity-number">02</span><strong>Equipamentos</strong><span class="entity-description">Ativos associados a empresas</span><span class="entity-type">ATIVO</span></div>
+                    <div class="entity-row"><span class="entity-number">03</span><strong>Tecnicos</strong><span class="entity-description">Responsaveis tecnicos</span><span class="entity-type">EQUIPA</span></div>
+                    <div class="entity-row"><span class="entity-number">04</span><strong>Incidentes</strong><span class="entity-description">Ocorrencias de seguranca</span><span class="entity-type">OPERACAO</span></div>
+                    <div class="entity-row"><span class="entity-number">05</span><strong>Vulnerabilidades</strong><span class="entity-description">Riscos identificados em ativos</span><span class="entity-type">OPERACAO</span></div>
+                    <div class="entity-row"><span class="entity-number">06</span><strong>Intervencoes</strong><span class="entity-description">Trabalho tecnico relacionado</span><span class="entity-type">RESPOSTA</span></div>
+                    <div class="entity-row"><span class="entity-number">07</span><strong>Relatorios de seguranca</strong><span class="entity-description">Avaliacoes por empresa</span><span class="entity-type">ANALISE</span></div>
+                    <div class="entity-row"><span class="entity-number">08</span><strong>Registos de atividade</strong><span class="entity-description">Historico de operacoes</span><span class="entity-type">HISTORICO</span></div>
+                </div>
+            </div>
+
+            <aside class="integrity-panel">
+                <div class="integrity-topline"><span class="integrity-symbol">+</span><span>CAMADA DE DADOS</span></div>
+                <h2>Integridade<br />desde a origem.</h2>
+                <p>O schema aplica regras essenciais para proteger a consistencia dos dados.</p>
+                <ul class="integrity-list">
+                    <li><span class="integrity-check">&#10003;</span><span>Chaves estrangeiras ativas</span></li>
+                    <li><span class="integrity-check">&#10003;</span><span>Identificadores unicos</span></li>
+                    <li><span class="integrity-check">&#10003;</span><span>Validacoes de datas e valores</span></li>
+                    <li><span class="integrity-check">&#10003;</span><span>Eliminacao referencial restritiva</span></li>
+                </ul>
+                <div class="integrity-footer"><span class="connection-indicator"></span> BASE DE DADOS OPERACIONAL</div>
+            </aside>
+        </section>
+
+        <footer class="phase-note">
+            <span class="phase-note-mark">01</span>
+            <p><strong>Fase de estrutura concluida.</strong> Os modulos operacionais serao desenvolvidos nas fases seguintes.</p>
+            <span class="phase-note-status">EM PREPARACAO</span>
+        </footer>
+    </main>
+</div>
