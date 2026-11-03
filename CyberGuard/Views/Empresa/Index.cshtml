@@ -1,0 +1,180 @@
+@model CyberGuard.ViewModels.EmpresaIndexViewModel
+@{
+    ViewData["Title"] = "Empresas";
+}
+
+<div class="workspace-shell" id="companies">
+    <aside class="sidebar" aria-label="Navegacao principal">
+        <a class="brand" asp-controller="Home" asp-action="Index" aria-label="CyberGuard, inicio">
+            <span class="brand-mark" aria-hidden="true">C</span>
+            <span class="brand-copy">
+                <strong>CyberGuard</strong>
+                <small>SECURITY PLATFORM</small>
+            </span>
+        </a>
+
+        <div class="sidebar-caption">PLATAFORMA</div>
+        <nav class="side-navigation">
+            <a class="side-link" asp-controller="Home" asp-action="Index">
+                <span class="side-link-index">01</span>
+                Visao geral
+            </a>
+            <a class="side-link is-active" asp-controller="Empresa" asp-action="Index" aria-current="page">
+                <span class="side-link-index">02</span>
+                Empresas
+            </a>
+        </nav>
+
+        <div class="sidebar-foot">
+            <span class="connection-indicator" aria-hidden="true"></span>
+            <span><strong>SQLite</strong><small>Operacional</small></span>
+        </div>
+    </aside>
+
+    <main class="main-panel">
+        <header class="topbar">
+            <span>GESTAO DE CLIENTES</span>
+            <span class="phase-label"><span></span> FASE 01</span>
+        </header>
+
+        <section class="page-intro">
+            <div class="eyebrow"><span class="eyebrow-line"></span> CYBERGUARD / EMPRESAS</div>
+            <h1>Empresas</h1>
+            <p>Registe e acompanhe as organizações monitorizadas pela plataforma.</p>
+        </section>
+
+        @if (TempData["MensagemSucesso"] is string sucesso)
+        {
+            <div class="alert-success">@sucesso</div>
+        }
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="validation-summary">
+                Verifique os campos obrigatorios antes de guardar a empresa.
+            </div>
+        }
+
+        <section class="management-panel">
+            <div class="panel-card form-card">
+                <div class="panel-header">
+                    <h2>Nova empresa</h2>
+                </div>
+
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+                    <div class="form-grid">
+                        <div class="form-field full">
+                            <label asp-for="Cadastro.Nome">Nome</label>
+                            <input asp-for="Cadastro.Nome" />
+                            <span asp-validation-for="Cadastro.Nome" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.NIF">NIF</label>
+                            <input asp-for="Cadastro.NIF" />
+                            <span asp-validation-for="Cadastro.NIF" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.Email">Email</label>
+                            <input asp-for="Cadastro.Email" type="email" />
+                            <span asp-validation-for="Cadastro.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.Telefone">Telefone</label>
+                            <input asp-for="Cadastro.Telefone" />
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.CodigoPostal">Codigo Postal</label>
+                            <input asp-for="Cadastro.CodigoPostal" />
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.Localidade">Localidade</label>
+                            <input asp-for="Cadastro.Localidade" />
+                        </div>
+
+                        <div class="form-field full">
+                            <label asp-for="Cadastro.Morada">Morada</label>
+                            <input asp-for="Cadastro.Morada" />
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.SetorAtividade">Setor de atividade</label>
+                            <input asp-for="Cadastro.SetorAtividade" />
+                        </div>
+
+                        <div class="form-field">
+                            <label asp-for="Cadastro.Ativa">Estado</label>
+                            <select asp-for="Cadastro.Ativa">
+                                <option value="true">Ativa</option>
+                                <option value="false">Inativa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field full">
+                            <label asp-for="Cadastro.Observacoes">Observacoes</label>
+                            <textarea asp-for="Cadastro.Observacoes"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <button type="submit" class="submit-button">Guardar empresa</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="panel-card list-card">
+                <div class="panel-header" style="padding: 22px 22px 12px; margin: 0;">
+                    <h2>Empresas registadas</h2>
+                </div>
+
+                <div class="table-wrap">
+                    @if (Model.Empresas.Any())
+                    {
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>NIF</th>
+                                    <th>Email</th>
+                                    <th>Localidade</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var empresa in Model.Empresas)
+                                {
+                                    <tr>
+                                        <td>@empresa.Nome</td>
+                                        <td>@empresa.NIF</td>
+                                        <td>@empresa.Email</td>
+                                        <td>@empresa.Localidade</td>
+                                        <td>
+                                            @if (empresa.Ativa)
+                                            {
+                                                <span class="status-pill active">Ativa</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="status-pill inactive">Inativa</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="empty-state">Ainda nao existem empresas registadas.</div>
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

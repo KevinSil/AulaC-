@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberGuard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed4cc3978e29df356d21c1987f130d843424d4e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ceacf863763ccb68b37d194b8d8ae6d494de323")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberGuard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberGuard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

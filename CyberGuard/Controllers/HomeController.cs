@@ -1,13 +1,27 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+using CyberGuard.Data;
 using CyberGuard.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CyberGuard.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
+    private readonly ApplicationDbContext _context;
+
+    public HomeController(ApplicationDbContext context)
     {
+        _context = context;
+    }
+
+    public async Task<IActionResult> Index()
+    {
+        ViewBag.TotalEmpresas = await _context.Empresas.CountAsync();
+        ViewBag.TotalEquipamentos = await _context.Equipamentos.CountAsync();
+        ViewBag.TotalIncidentes = await _context.Incidentes.CountAsync();
+        ViewBag.TotalTecnicos = await _context.Tecnicos.CountAsync();
+
         return View();
     }
 

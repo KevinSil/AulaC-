@@ -231,7 +231,6 @@ C:\Users\local_35241\Temp\CyberGuard-build-check\Debug\net10.0\CyberGuard.deps.j
 C:\Users\local_35241\Temp\CyberGuard-build-check\Debug\net10.0\CyberGuard.runtimeconfig.json
 C:\Users\local_35241\Temp\CyberGuard-build-check\Debug\net10.0\CyberGuard.dll
 C:\Users\local_35241\Temp\CyberGuard-build-check\Debug\net10.0\CyberGuard.pdb
-E:\escola\github\vers1\AulaC-\CyberGuard\obj\Debug\net10.0\compressed\ogabn3imdz-{0}-joxfu1mbm3-joxfu1mbm3.gz
 C:\Users\local_35241\Temp\CyberGuard-preview-current\Debug\net10.0\bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
 C:\Users\local_35241\Temp\CyberGuard-preview-current\Debug\net10.0\appsettings.Development.json
 C:\Users\local_35241\Temp\CyberGuard-preview-current\Debug\net10.0\appsettings.json
@@ -271,3 +270,4 @@ C:\Users\local_3524\Temp\CyberGuard-phase3-check\Debug\net10.0\CyberGuard.runtim
 C:\Users\local_3524\Temp\CyberGuard-phase3-check\Debug\net10.0\CyberGuard.dll
 C:\Users\local_3524\Temp\CyberGuard-phase3-check\Debug\net10.0\CyberGuard.pdb
 C:\Users\local_3524\Temp\CyberGuard-phase3-check\Debug\net10.0\CyberGuard.exe
+E:\escola\github\vers1\AulaC-\CyberGuard\obj\Debug\net10.0\compressed\ogabn3imdz-{0}-aoa8qykter-aoa8qykter.gz
