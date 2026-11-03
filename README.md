@@ -43,3 +43,5 @@ O manifesto da ferramenta EF Core está em `CyberGuard/dotnet-tools.json`.
 
 Consultar `CyberGuard/Documentation/` para os requisitos do sistema, o diagrama entidade-relação, o schema relacional, o dicionário de dados e as regras de negócio.
 
+O relatório de auditoria, validação e preparação da entrega está em `CyberGuard/Documentation/06-Validacao-Entrega.md`.
+
