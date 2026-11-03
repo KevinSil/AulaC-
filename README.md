@@ -40,6 +40,6 @@ dotnet run
 O manifesto da ferramenta EF Core está em `CyberGuard/dotnet-tools.json`.
 
 ## Documentação
-
+ºlnfkjsd
 Consultar `CyberGuard/Documentation/` para os requisitos do sistema, o diagrama entidade-relação, o schema relacional, o dicionário de dados e as regras de negócio.
 
