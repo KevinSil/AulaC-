@@ -2,7 +2,7 @@
 
 ## Introdução
 
-A aplicação TechRepair/CyberGuard foi desenvolvida para apoiar a gestão de cibersegurança numa organização. A presente versão corresponde à primeira fase da solução, com foco na base do sistema, na estrutura de dados e na persistência em SQLite.
+A aplicação CyberGuard foi desenvolvida para apoiar a gestão de cibersegurança numa organização. A presente versão corresponde à primeira fase da solução, com foco na base do sistema, na estrutura de dados e na persistência em SQLite.
 
 ## Objetivo da aplicação
 

@@ -1,12 +1,12 @@
-# TechRepair
+# CyberGuard
 
 ## Identificação do projeto
 
-TechRepair é a designação do projeto de gestão de cibersegurança implementado no repositório atual. A aplicação principal está na pasta `CyberGuard/` e corresponde à solução ASP.NET Core MVC de base tecnológica e de dados para a gestão de ativos, incidentes, vulnerabilidades e relatórios de segurança.
+CyberGuard é o nome do projeto de gestão de cibersegurança implementado no repositório atual. A aplicação principal está na pasta `CyberGuard/` e corresponde à solução ASP.NET Core MVC de base tecnológica e de dados para a gestão de ativos, incidentes, vulnerabilidades e relatórios de segurança.
 
 ## Descrição da aplicação
 
-A aplicação TechRepair/CyberGuard foi desenvolvida para organizar e centralizar o domínio de cibersegurança numa organização. Nesta fase, o projeto concentra-se na estrutura base da solução, no modelo de domínio, no schema SQLite, na manutenção da integridade dos dados e na apresentação inicial da aplicação.
+A aplicação CyberGuard foi desenvolvida para organizar e centralizar o domínio de cibersegurança numa organização. Nesta fase, o projeto concentra-se na estrutura base da solução, no modelo de domínio, no schema SQLite, na manutenção da integridade dos dados e na apresentação inicial da aplicação.
 
 A implementação atual inclui:
 
